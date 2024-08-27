@@ -1,9 +1,12 @@
-# Example file for Programming Foundations: Algorithms by Joe Marini
-# use recursion to implement a countdown counter
-
-
-def countdown(x):
-    return
+def countdown(num):
+    if num < 0:
+        return
+    if not num:
+        print("Happy New Year!")
+        return
+    else:
+        print(f'{num}...')
+        countdown(num-1)
 
 
 countdown(5)
