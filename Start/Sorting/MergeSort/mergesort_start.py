@@ -1,34 +1,37 @@
-# Example file for Programming Foundations: Algorithms by Joe Marini
-# Implement a merge sort with recursion
+def merge(set1, set2):
+    merged_set = []
+    a1 = 0
+    a2 = 0
+    while a1 < len(set1) and a2 < len(set2):
+        if set1[a1] < set2[a2]:
+            merged_set.append(set1[a1])
+            a1 += 1
+        else:
+            merged_set.append(set2[a2])
+            a2 += 1
+    if a1 == len(set1):
+        while a2 < len(set2):
+            merged_set.append(set2[a2])
+            a2 += 1
+    else:
+        while a1 < len(set1):
+            merged_set.append(set1[a1])
+            a1 += 1
+    return merged_set
+
+
+def mergesort(dataset):
+    if len(dataset) == 1:
+        return dataset
+    else:
+        list1 = mergesort(dataset[:int(len(dataset) / 2)])
+        list2 = mergesort(dataset[int(len(dataset) / 2):])
+        return merge(list1, list2)
 
 
 items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 
-def mergesort(dataset):
-    if len(dataset) > 1:
-        mid = len(dataset) // 2
-        leftarr = dataset[:mid]
-        rightarr = dataset[mid:]
-
-        # TODO: recursively break down the arrays
-
-
-        # TODO: now perform the merging
-        i=0 # index into the left array
-        j=0 # index into the right array
-        k=0 # index into merged array
-
-        # TODO: while both arrays have content
-
-
-        # TODO: if the left array still has values, add them
-
-
-        # TODO: if the right array still has values, add them
-
-
-
 # test the merge sort with data
 print(items)
-mergesort(items)
-print(items)
+sorted_items = mergesort(items)
+print(sorted_items)
