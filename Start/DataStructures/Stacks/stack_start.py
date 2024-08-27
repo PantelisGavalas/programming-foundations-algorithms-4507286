@@ -1,13 +1,16 @@
-# Example file for Programming Foundations: Algorithms by Joe Marini
-# try out the Python stack functions
+# Implementation of a Stack using a List.
+stack = []
 
-# TODO: create a new empty stack
+# Push items in the Stack
+stack.append(1)
+stack.append(2)
+stack.append(3)
+stack.append(4)
 
+# Print Stack contents
+print(stack)
 
-# TODO: push items onto the stack
-
-
-# TODO: print the stack contents
-
-
-# TODO: pop an item off the stack
+# Remove - pop item from the stack
+popped_item = stack.pop()
+print(popped_item)
+print(stack)

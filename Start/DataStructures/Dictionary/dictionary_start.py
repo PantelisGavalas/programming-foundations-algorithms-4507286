@@ -1,17 +1,21 @@
-# Example file for Programming Foundations: Algorithms by Joe Marini
-# demonstrate dictionary usage
+my_dict = {
+    'key1': 1,
+    'key2': 2,
+    'key3': 3,
+}
+print(my_dict)
 
+# Add key-value to the Dictionary
+my_dict['key4'] = 444
+print(my_dict)
 
-# TODO: create a dictionary all at once
+# Modify value of specific key in the Dictionary
+my_dict['key4'] = 4
+print(my_dict)
 
+# Access non-existent key
+#print(my_dict['key555'])    # ERROR
 
-# TODO: create a dictionary progressively
-
-
-# TODO: replace an item
-
-
-# TODO: try to access a nonexistent key
-
-
-# TODO: iterate the keys and values in the dictionary
+# Iterate key, value pairs from the Dictionary
+for key, value in my_dict.items():
+    print(f'Key = {key} -- Value = {value}')
