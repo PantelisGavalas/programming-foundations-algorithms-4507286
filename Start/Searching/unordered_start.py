@@ -1,13 +1,11 @@
-# Example file for Programming Foundations: Algorithms by Joe Marini
-# searching for an item in an unordered list
-# sometimes called a Linear search
+# Return index of item if found in the List else return None
+def find_item(itemlist, val):
+    for i, item in enumerate(itemlist):
+        if item == val:
+            return i
+    return None
 
-# declare a list of values to operate on
+
 items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
-
-def find_item(item, itemlist):
-    pass
-
-
-print(find_item(87, items))
-print(find_item(250, items))
+print(find_item(items, 87))
+print(find_item(items, 250))
